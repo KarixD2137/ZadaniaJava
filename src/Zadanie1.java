@@ -1,7 +1,7 @@
 /*
 Zadanie 1.
 Wypisz na ekranie wszystkie liczby dodatnie dwucyfrowe parzyste. Liczby oddziel znakiem spacji.
- */
+*/
 
 public class Zadanie1 {
     public void wypiszDwucyfroweDodatnieParzyste()
