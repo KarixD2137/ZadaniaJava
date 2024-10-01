@@ -71,13 +71,13 @@ public class Main {
         int numerZadania;
 
         System.out.println("Wybierz zestaw zadań");
-        System.out.println("========");
+        System.out.println("========================================");
         System.out.println("1 - Podstawy programowania w Javie");
         System.out.println("2 - Tablice i kolekcje");
-        System.out.println("3 - Najbliższa liczba palindromiczna");
-        System.out.println("========");
+        System.out.println("========================================");
 
         numerZestawu = scanner.nextInt();
+        System.out.println();
         switch (numerZestawu)
         {
 
@@ -87,13 +87,17 @@ public class Main {
 
             case 1:
                 System.out.println("Wybierz zadanie");
-                System.out.println("========");
+                System.out.println("========================================");
                 System.out.println("1 - Liczby dwucyfrowe dodatnie parzyste");
                 System.out.println("2 - Czy tekst jest palindromem");
-                System.out.println("========");
+                System.out.println("3 - Najbliższa liczba palindromiczna");
+                System.out.println("4 - Szyfr Cezara");
+                System.out.println("8 - Losowe hasło");
+                System.out.println("========================================");
 
 
                 numerZadania = scanner.nextInt();
+                System.out.println();
                 switch (numerZadania) {
                     case 1:
                         Zadanie1_1 zadanie1_1 = new Zadanie1_1();
@@ -102,6 +106,18 @@ public class Main {
                     case 2:
                         Zadanie1_2 zadanie1_2 = new Zadanie1_2();
                         System.out.println(zadanie1_2.czyPalindrom());
+                        break;
+                    case 3:
+                        Zadanie1_3 zadanie1_3 = new Zadanie1_3();
+                        System.out.println(zadanie1_3.znajdzNajblizszaLiczbePalindromiczna());
+                        break;
+                    case 4:
+                        Zadanie1_4 zadanie1_4 = new Zadanie1_4();
+                        System.out.println(zadanie1_4.zaszyfrujSzyfremCezara(3));
+                        break;
+                    case 8:
+                        Zadanie1_8 zadanie1_8 = new Zadanie1_8();
+                        System.out.println(zadanie1_8.wygenerujHaslo(20));
                         break;
                 }
                 break;
@@ -113,12 +129,13 @@ public class Main {
             //===================
             case 2:
                 System.out.println("Wybierz zadanie");
-                System.out.println("========");
+                System.out.println("========================================");
                 System.out.println("1 - Pierwiastki indeksów tablicy");
-                System.out.println("========");
+                System.out.println("========================================");
 
 
                 numerZadania = scanner.nextInt();
+                System.out.println();
                 switch (numerZadania) {
                     case 1:
                         Zadanie2_1 zadanie2_1 = new Zadanie2_1();

@@ -1,5 +1,5 @@
 /*
-Zadanie 9.
+Zadanie 1.
 Zadeklaruj tablicę 10 liczb rzeczywistych i wypełnij ją pierwiastkami jej indeksów.
 */
 
