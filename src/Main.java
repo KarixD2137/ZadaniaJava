@@ -1,4 +1,7 @@
 /*
+===================
+   ZESTAW ZADAŃ 1
+===================
 Zadanie 1.
 Wypisz na ekranie wszystkie liczby dodatnie dwucyfrowe parzyste. Liczby oddziel znakiem spacji.
 
@@ -28,26 +31,32 @@ Zadanie 8.
 Wygeneruj hasło losowe. Długość hasła powinna wynosić 20 znaków, a ponadto powinno zawierać liczby,
 wielkie i małe litery oraz znaki specjalne.
 
-Zadanie 9.
+
+
+===================
+   ZESTAW ZADAŃ 2
+===================
+
+Zadanie 1.
 Zadeklaruj tablicę 10 liczb rzeczywistych i wypełnij ją pierwiastkami jej indeksów.
 
-Zadanie 10.
+Zadanie 2.
 Zadeklaruj tablicę 40-elementową i wstaw do niej kolejne liczby ciągu Fibonacciego. Ciąg
 Fibonacciego to ciąg, w którym każda kolejna liczba jest równa sumie dwóch poprzednich.
 Wczytaj liczbę i sprawdź, która liczba Fibonacciego jest najbliższa wczytanej liczbie.
 Zadanie wykonaj z wykorzystaniem algorytmu wyszukiwania binarnego.
 
-Zadanie 11.
+Zadanie 3.
 Zadeklaruj tablicę z liczbami całkowitymi i wstaw do niej 100 liczb losowych z zakresu od 1 do 100.
 Zadeklaruj dwie kolekcje i wypełnij je wartościami z tablicy. Do jednej wstaw liczby parzyste,
 a do drugiej nieparzyste. Podaj, ile różnych liczb wylosowano.
 
-Zadanie 12.
+Zadanie 4.
 Wykorzystaj tablicę z zadania 3. z wylosowanymi wartościami. Posortuj tablicę. Znajdź medianę
 (wartość środkową tablicy), dominantę (wartość najczęściej występującą w tablicy) i wartość średnią
 wartości zapisanych w tablicy.
 
-Zadanie 13.
+Zadanie 5.
 Wygeneruj tablicę liczb pierwszych mniejszych od 1000. Wykorzystaj do tego sito Eratostenesa.
 Wypisz wszystkie liczby pierwsze z zakresu od x do y, gdzie x0 i x,y <1000.
 */
@@ -57,31 +66,67 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Wybierz zadanie");
-        System.out.println("========");
-        System.out.println("1 - Liczby dwucyfrowe dodatnie parzyste");
-        System.out.println("2 - Czy tekst jest palindromem");
-        //System.out.println("3 - Najbliższa liczba palindromiczna");
-        //System.out.println("4 - Czy teksty są dla siebie anagramami");
-        System.out.println();
-        System.out.println("9 - Pierwiastki indeksów tablicy");
-        System.out.println("========");
-
-
         Scanner scanner = new Scanner(System.in);
-        int numerZadania = scanner.nextInt();
-        switch (numerZadania) {
+        int numerZestawu;
+        int numerZadania;
+
+        System.out.println("Wybierz zestaw zadań");
+        System.out.println("========");
+        System.out.println("1 - Podstawy programowania w Javie");
+        System.out.println("2 - Tablice i kolekcje");
+        System.out.println("3 - Najbliższa liczba palindromiczna");
+        System.out.println("========");
+
+        numerZestawu = scanner.nextInt();
+        switch (numerZestawu)
+        {
+
+            // ===================
+            //   ZESTAW ZADAŃ 1
+            //===================
+
             case 1:
-                Zadanie1 zadanie1 = new Zadanie1();
-                zadanie1.wypiszDwucyfroweDodatnieParzyste();
+                System.out.println("Wybierz zadanie");
+                System.out.println("========");
+                System.out.println("1 - Liczby dwucyfrowe dodatnie parzyste");
+                System.out.println("2 - Czy tekst jest palindromem");
+                System.out.println("========");
+
+
+                numerZadania = scanner.nextInt();
+                switch (numerZadania) {
+                    case 1:
+                        Zadanie1_1 zadanie1_1 = new Zadanie1_1();
+                        zadanie1_1.wypiszDwucyfroweDodatnieParzyste();
+                        break;
+                    case 2:
+                        Zadanie1_2 zadanie1_2 = new Zadanie1_2();
+                        System.out.println(zadanie1_2.czyPalindrom());
+                        break;
+                }
                 break;
+
+
+
+            // ===================
+            //   ZESTAW ZADAŃ 2
+            //===================
             case 2:
-                Zadanie2 zadanie2 = new Zadanie2();
-                System.out.println(zadanie2.czyPalindrom());
-                break;
-            case 9:
-                Zadanie9 zadanie9 = new Zadanie9();
-                zadanie9.ZadeklarujTablicePierwiastkow();
+                System.out.println("Wybierz zadanie");
+                System.out.println("========");
+                System.out.println("1 - Pierwiastki indeksów tablicy");
+                System.out.println("========");
+
+
+                numerZadania = scanner.nextInt();
+                switch (numerZadania) {
+                    case 1:
+                        Zadanie2_1 zadanie2_1 = new Zadanie2_1();
+                        zadanie2_1.ZadeklarujTablicePierwiastkow();
+                        break;
+                    case 2:
+                        break;
+                }
                 break;
         }
     }

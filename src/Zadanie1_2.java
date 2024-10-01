@@ -6,7 +6,7 @@ początku ma takie samo brzmienie.
 
 import java.util.Scanner;
 
-public class Zadanie2
+public class Zadanie1_2
 {
     boolean czyPalindrom()
     {
